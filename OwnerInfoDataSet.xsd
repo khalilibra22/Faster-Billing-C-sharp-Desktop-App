@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OwnerInfoDataSet" targetNamespace="http://tempuri.org/OwnerInfoDataSet.xsd" xmlns:mstns="http://tempuri.org/OwnerInfoDataSet.xsd" xmlns="http://tempuri.org/OwnerInfoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AppInfoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AppInfoConnectionString (Settings)" PropertyReference="ApplicationSettings.Facturation.Properties.Settings.GlobalReference.Default.AppInfoConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FacturationConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FacturationConnectionString (Settings)" PropertyReference="ApplicationSettings.Facturation.Properties.Settings.GlobalReference.Default.FacturationConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ownerInfoTableAdapter" GeneratorDataComponentClassName="ownerInfoTableAdapter" Name="ownerInfo" UserDataComponentName="ownerInfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FacturationConnectionString (Settings)" DbObjectName="ownerInfo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        companyName, activity, address, wilaya, phone, email, nrc, idFiscal, bankInfo,nis,articleNum
+FROM            ownerInfo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="companyName" DataSetColumn="companyName" />
+              <Mapping SourceColumn="activity" DataSetColumn="activity" />
+              <Mapping SourceColumn="address" DataSetColumn="address" />
+              <Mapping SourceColumn="wilaya" DataSetColumn="wilaya" />
+              <Mapping SourceColumn="phone" DataSetColumn="phone" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="nrc" DataSetColumn="nrc" />
+              <Mapping SourceColumn="idFiscal" DataSetColumn="idFiscal" />
+              <Mapping SourceColumn="bankInfo" DataSetColumn="bankInfo" />
+              <Mapping SourceColumn="nis" DataSetColumn="nis" />
+              <Mapping SourceColumn="articleNum" DataSetColumn="articleNum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OwnerInfoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OwnerInfoDataSet" msprop:Generator_UserDSName="OwnerInfoDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ownerInfo" msprop:Generator_TableClassName="ownerInfoDataTable" msprop:Generator_TableVarName="tableownerInfo" msprop:Generator_TablePropName="ownerInfo" msprop:Generator_RowDeletingName="ownerInfoRowDeleting" msprop:Generator_RowChangingName="ownerInfoRowChanging" msprop:Generator_RowEvHandlerName="ownerInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="ownerInfoRowDeleted" msprop:Generator_UserTableName="ownerInfo" msprop:Generator_RowChangedName="ownerInfoRowChanged" msprop:Generator_RowEvArgName="ownerInfoRowChangeEvent" msprop:Generator_RowClassName="ownerInfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="companyName" msprop:Generator_ColumnVarNameInTable="columncompanyName" msprop:Generator_ColumnPropNameInRow="companyName" msprop:Generator_ColumnPropNameInTable="companyNameColumn" msprop:Generator_UserColumnName="companyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="activity" msprop:Generator_ColumnVarNameInTable="columnactivity" msprop:Generator_ColumnPropNameInRow="activity" msprop:Generator_ColumnPropNameInTable="activityColumn" msprop:Generator_UserColumnName="activity" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="address" msprop:Generator_ColumnVarNameInTable="columnaddress" msprop:Generator_ColumnPropNameInRow="address" msprop:Generator_ColumnPropNameInTable="addressColumn" msprop:Generator_UserColumnName="address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="wilaya" msprop:Generator_ColumnVarNameInTable="columnwilaya" msprop:Generator_ColumnPropNameInRow="wilaya" msprop:Generator_ColumnPropNameInTable="wilayaColumn" msprop:Generator_UserColumnName="wilaya" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="phone" msprop:Generator_ColumnVarNameInTable="columnphone" msprop:Generator_ColumnPropNameInRow="phone" msprop:Generator_ColumnPropNameInTable="phoneColumn" msprop:Generator_UserColumnName="phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nrc" msprop:Generator_ColumnVarNameInTable="columnnrc" msprop:Generator_ColumnPropNameInRow="nrc" msprop:Generator_ColumnPropNameInTable="nrcColumn" msprop:Generator_UserColumnName="nrc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idFiscal" msprop:Generator_ColumnVarNameInTable="columnidFiscal" msprop:Generator_ColumnPropNameInRow="idFiscal" msprop:Generator_ColumnPropNameInTable="idFiscalColumn" msprop:Generator_UserColumnName="idFiscal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankInfo" msprop:Generator_ColumnVarNameInTable="columnbankInfo" msprop:Generator_ColumnPropNameInRow="bankInfo" msprop:Generator_ColumnPropNameInTable="bankInfoColumn" msprop:Generator_UserColumnName="bankInfo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nis" msprop:Generator_ColumnVarNameInTable="columnnis" msprop:Generator_ColumnPropNameInRow="nis" msprop:Generator_ColumnPropNameInTable="nisColumn" msprop:Generator_UserColumnName="nis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="articleNum" msprop:Generator_ColumnVarNameInTable="columnarticleNum" msprop:Generator_ColumnPropNameInRow="articleNum" msprop:Generator_ColumnPropNameInTable="articleNumColumn" msprop:Generator_UserColumnName="articleNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

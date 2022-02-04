@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DetteDataSet" targetNamespace="http://tempuri.org/DetteDataSet.xsd" xmlns:mstns="http://tempuri.org/DetteDataSet.xsd" xmlns="http://tempuri.org/DetteDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FacturationConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FacturationConnectionString (Settings)" PropertyReference="ApplicationSettings.Facturation.Properties.Settings.GlobalReference.Default.FacturationConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DetteDtTableAdapter" GeneratorDataComponentClassName="DetteDtTableAdapter" Name="DetteDt" UserDataComponentName="DetteDtTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FacturationConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(Client.dette) AS clientDette, SUM(Supplier.suppDette) AS supplierDette
+FROM            Client, Supplier</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="clientDette" DataSetColumn="clientDette" />
+              <Mapping SourceColumn="supplierDette" DataSetColumn="supplierDette" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DetteDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DetteDataSet" msprop:Generator_UserDSName="DetteDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DetteDt" msprop:Generator_TableClassName="DetteDtDataTable" msprop:Generator_TableVarName="tableDetteDt" msprop:Generator_TablePropName="DetteDt" msprop:Generator_RowDeletingName="DetteDtRowDeleting" msprop:Generator_RowChangingName="DetteDtRowChanging" msprop:Generator_RowEvHandlerName="DetteDtRowChangeEventHandler" msprop:Generator_RowDeletedName="DetteDtRowDeleted" msprop:Generator_UserTableName="DetteDt" msprop:Generator_RowChangedName="DetteDtRowChanged" msprop:Generator_RowEvArgName="DetteDtRowChangeEvent" msprop:Generator_RowClassName="DetteDtRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="clientDette" msprop:Generator_ColumnVarNameInTable="columnclientDette" msprop:Generator_ColumnPropNameInRow="clientDette" msprop:Generator_ColumnPropNameInTable="clientDetteColumn" msprop:Generator_UserColumnName="clientDette" type="xs:double" minOccurs="0" />
+              <xs:element name="supplierDette" msprop:Generator_ColumnVarNameInTable="columnsupplierDette" msprop:Generator_ColumnPropNameInRow="supplierDette" msprop:Generator_ColumnPropNameInTable="supplierDetteColumn" msprop:Generator_UserColumnName="supplierDette" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

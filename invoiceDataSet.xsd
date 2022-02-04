@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="invoiceDataSet" targetNamespace="http://tempuri.org/invoiceDataSet.xsd" xmlns:mstns="http://tempuri.org/invoiceDataSet.xsd" xmlns="http://tempuri.org/invoiceDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FacturationConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FacturationConnectionString (Settings)" PropertyReference="ApplicationSettings.Facturation.Properties.Settings.GlobalReference.Default.FacturationConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="invoiceDtTableAdapter" GeneratorDataComponentClassName="invoiceDtTableAdapter" Name="invoiceDt" UserDataComponentName="invoiceDtTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FacturationConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Invoice.*, Client.clientName, Client.clientAddress, Client.clientWilaya
+FROM            (Invoice INNER JOIN
+                         Client ON Invoice.clientID = Client.clientID)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="factID" DataSetColumn="factID" />
+              <Mapping SourceColumn="factDate" DataSetColumn="factDate" />
+              <Mapping SourceColumn="NB" DataSetColumn="NB" />
+              <Mapping SourceColumn="clientID" DataSetColumn="clientID" />
+              <Mapping SourceColumn="clientName" DataSetColumn="clientName" />
+              <Mapping SourceColumn="clientAddress" DataSetColumn="clientAddress" />
+              <Mapping SourceColumn="clientWilaya" DataSetColumn="clientWilaya" />
+              <Mapping SourceColumn="tva" DataSetColumn="tva" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="invoiceDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="invoiceDataSet" msprop:Generator_UserDSName="invoiceDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="invoiceDt" msprop:Generator_TableClassName="invoiceDtDataTable" msprop:Generator_TableVarName="tableinvoiceDt" msprop:Generator_TablePropName="invoiceDt" msprop:Generator_RowDeletingName="invoiceDtRowDeleting" msprop:Generator_RowChangingName="invoiceDtRowChanging" msprop:Generator_RowEvHandlerName="invoiceDtRowChangeEventHandler" msprop:Generator_RowDeletedName="invoiceDtRowDeleted" msprop:Generator_UserTableName="invoiceDt" msprop:Generator_RowChangedName="invoiceDtRowChanged" msprop:Generator_RowEvArgName="invoiceDtRowChangeEvent" msprop:Generator_RowClassName="invoiceDtRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="factID" msprop:Generator_ColumnVarNameInTable="columnfactID" msprop:Generator_ColumnPropNameInRow="factID" msprop:Generator_ColumnPropNameInTable="factIDColumn" msprop:Generator_UserColumnName="factID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="factDate" msprop:Generator_ColumnVarNameInTable="columnfactDate" msprop:Generator_ColumnPropNameInRow="factDate" msprop:Generator_ColumnPropNameInTable="factDateColumn" msprop:Generator_UserColumnName="factDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NB" msprop:Generator_ColumnVarNameInTable="columnNB" msprop:Generator_ColumnPropNameInRow="NB" msprop:Generator_ColumnPropNameInTable="NBColumn" msprop:Generator_UserColumnName="NB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="536870910" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clientID" msprop:Generator_ColumnVarNameInTable="columnclientID" msprop:Generator_ColumnPropNameInRow="clientID" msprop:Generator_ColumnPropNameInTable="clientIDColumn" msprop:Generator_UserColumnName="clientID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clientName" msprop:Generator_ColumnVarNameInTable="columnclientName" msprop:Generator_ColumnPropNameInRow="clientName" msprop:Generator_ColumnPropNameInTable="clientNameColumn" msprop:Generator_UserColumnName="clientName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clientAddress" msprop:Generator_ColumnVarNameInTable="columnclientAddress" msprop:Generator_ColumnPropNameInRow="clientAddress" msprop:Generator_ColumnPropNameInTable="clientAddressColumn" msprop:Generator_UserColumnName="clientAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clientWilaya" msprop:Generator_ColumnVarNameInTable="columnclientWilaya" msprop:Generator_ColumnPropNameInRow="clientWilaya" msprop:Generator_ColumnPropNameInTable="clientWilayaColumn" msprop:Generator_UserColumnName="clientWilaya" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tva" msprop:Generator_ColumnVarNameInTable="columntva" msprop:Generator_ColumnPropNameInRow="tva" msprop:Generator_ColumnPropNameInTable="tvaColumn" msprop:Generator_UserColumnName="tva" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

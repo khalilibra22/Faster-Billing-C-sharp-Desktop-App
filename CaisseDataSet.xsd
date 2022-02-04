@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CaisseDataSet" targetNamespace="http://tempuri.org/CaisseDataSet.xsd" xmlns:mstns="http://tempuri.org/CaisseDataSet.xsd" xmlns="http://tempuri.org/CaisseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FacturationConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FacturationConnectionString (Settings)" PropertyReference="ApplicationSettings.Facturation.Properties.Settings.GlobalReference.Default.FacturationConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CaisseDtTableAdapter" GeneratorDataComponentClassName="CaisseDtTableAdapter" Name="CaisseDt" UserDataComponentName="CaisseDtTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FacturationConnectionString (Settings)" DbObjectName="Supplier" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        supplierName, suppDette
+FROM            Supplier</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="supplierName" DataSetColumn="supplierName" />
+              <Mapping SourceColumn="suppDette" DataSetColumn="suppDette" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CaisseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CaisseDataSet" msprop:Generator_UserDSName="CaisseDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CaisseDt" msprop:Generator_TableClassName="CaisseDtDataTable" msprop:Generator_TableVarName="tableCaisseDt" msprop:Generator_TablePropName="CaisseDt" msprop:Generator_RowDeletingName="CaisseDtRowDeleting" msprop:Generator_RowChangingName="CaisseDtRowChanging" msprop:Generator_RowEvHandlerName="CaisseDtRowChangeEventHandler" msprop:Generator_RowDeletedName="CaisseDtRowDeleted" msprop:Generator_UserTableName="CaisseDt" msprop:Generator_RowChangedName="CaisseDtRowChanged" msprop:Generator_RowEvArgName="CaisseDtRowChangeEvent" msprop:Generator_RowClassName="CaisseDtRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="supplierName" msprop:Generator_ColumnVarNameInTable="columnsupplierName" msprop:Generator_ColumnPropNameInRow="supplierName" msprop:Generator_ColumnPropNameInTable="supplierNameColumn" msprop:Generator_UserColumnName="supplierName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="suppDette" msprop:Generator_ColumnVarNameInTable="columnsuppDette" msprop:Generator_ColumnPropNameInRow="suppDette" msprop:Generator_ColumnPropNameInTable="suppDetteColumn" msprop:Generator_UserColumnName="suppDette" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

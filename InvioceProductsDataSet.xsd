@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="InvioceProductsDataSet" targetNamespace="http://tempuri.org/InvioceProductsDataSet.xsd" xmlns:mstns="http://tempuri.org/InvioceProductsDataSet.xsd" xmlns="http://tempuri.org/InvioceProductsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FacturationConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FacturationConnectionString (Settings)" PropertyReference="ApplicationSettings.Facturation.Properties.Settings.GlobalReference.Default.FacturationConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="invoiceProdsDtTableAdapter" GeneratorDataComponentClassName="invoiceProdsDtTableAdapter" Name="invoiceProdsDt" UserDataComponentName="invoiceProdsDtTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FacturationConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        InvoiceProds.productRef, InvoiceProds.selledQnt, InvoiceProds.sellPrice, InvoiceProds.colis, Product.productName
+FROM            (InvoiceProds INNER JOIN
+                         Product ON InvoiceProds.productRef = Product.productRef)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="productRef" DataSetColumn="productRef" />
+              <Mapping SourceColumn="selledQnt" DataSetColumn="selledQnt" />
+              <Mapping SourceColumn="sellPrice" DataSetColumn="sellPrice" />
+              <Mapping SourceColumn="colis" DataSetColumn="colis" />
+              <Mapping SourceColumn="productName" DataSetColumn="productName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InvioceProductsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="InvioceProductsDataSet" msprop:Generator_UserDSName="InvioceProductsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="invoiceProdsDt" msprop:Generator_TableClassName="invoiceProdsDtDataTable" msprop:Generator_TableVarName="tableinvoiceProdsDt" msprop:Generator_TablePropName="invoiceProdsDt" msprop:Generator_RowDeletingName="invoiceProdsDtRowDeleting" msprop:Generator_RowChangingName="invoiceProdsDtRowChanging" msprop:Generator_RowEvHandlerName="invoiceProdsDtRowChangeEventHandler" msprop:Generator_RowDeletedName="invoiceProdsDtRowDeleted" msprop:Generator_UserTableName="invoiceProdsDt" msprop:Generator_RowChangedName="invoiceProdsDtRowChanged" msprop:Generator_RowEvArgName="invoiceProdsDtRowChangeEvent" msprop:Generator_RowClassName="invoiceProdsDtRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="productRef" msprop:Generator_ColumnVarNameInTable="columnproductRef" msprop:Generator_ColumnPropNameInRow="productRef" msprop:Generator_ColumnPropNameInTable="productRefColumn" msprop:Generator_UserColumnName="productRef" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="selledQnt" msprop:Generator_ColumnVarNameInTable="columnselledQnt" msprop:Generator_ColumnPropNameInRow="selledQnt" msprop:Generator_ColumnPropNameInTable="selledQntColumn" msprop:Generator_UserColumnName="selledQnt" type="xs:int" minOccurs="0" />
+              <xs:element name="sellPrice" msprop:Generator_ColumnVarNameInTable="columnsellPrice" msprop:Generator_ColumnPropNameInRow="sellPrice" msprop:Generator_ColumnPropNameInTable="sellPriceColumn" msprop:Generator_UserColumnName="sellPrice" type="xs:double" minOccurs="0" />
+              <xs:element name="colis" msprop:Generator_ColumnVarNameInTable="columncolis" msprop:Generator_ColumnPropNameInRow="colis" msprop:Generator_ColumnPropNameInTable="colisColumn" msprop:Generator_UserColumnName="colis" type="xs:int" minOccurs="0" />
+              <xs:element name="productName" msprop:Generator_ColumnVarNameInTable="columnproductName" msprop:Generator_ColumnPropNameInRow="productName" msprop:Generator_ColumnPropNameInTable="productNameColumn" msprop:Generator_UserColumnName="productName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

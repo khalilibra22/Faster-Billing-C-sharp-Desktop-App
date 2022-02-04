@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BonAchatProds" targetNamespace="http://tempuri.org/BonAchatProds.xsd" xmlns:mstns="http://tempuri.org/BonAchatProds.xsd" xmlns="http://tempuri.org/BonAchatProds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FacturationConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FacturationConnectionString (Settings)" PropertyReference="ApplicationSettings.Facturation.Properties.Settings.GlobalReference.Default.FacturationConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="achatProdsDtTableAdapter" GeneratorDataComponentClassName="achatProdsDtTableAdapter" Name="achatProdsDt" UserDataComponentName="achatProdsDtTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FacturationConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Buyedprods.buyingNum, Buyedprods.productRef, Buyedprods.buyPrice, Buyedprods.buyQuantity, Product.productName
+FROM            (Buyedprods INNER JOIN
+                         Product ON Buyedprods.productRef = Product.productRef)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="buyingNum" DataSetColumn="buyingNum" />
+              <Mapping SourceColumn="productRef" DataSetColumn="productRef" />
+              <Mapping SourceColumn="buyPrice" DataSetColumn="buyPrice" />
+              <Mapping SourceColumn="buyQuantity" DataSetColumn="buyQuantity" />
+              <Mapping SourceColumn="productName" DataSetColumn="productName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BonAchatProds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BonAchatProds" msprop:Generator_UserDSName="BonAchatProds">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="achatProdsDt" msprop:Generator_TableClassName="achatProdsDtDataTable" msprop:Generator_TableVarName="tableachatProdsDt" msprop:Generator_TablePropName="achatProdsDt" msprop:Generator_RowDeletingName="achatProdsDtRowDeleting" msprop:Generator_RowChangingName="achatProdsDtRowChanging" msprop:Generator_RowEvHandlerName="achatProdsDtRowChangeEventHandler" msprop:Generator_RowDeletedName="achatProdsDtRowDeleted" msprop:Generator_UserTableName="achatProdsDt" msprop:Generator_RowChangedName="achatProdsDtRowChanged" msprop:Generator_RowEvArgName="achatProdsDtRowChangeEvent" msprop:Generator_RowClassName="achatProdsDtRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="buyingNum" msprop:Generator_ColumnVarNameInTable="columnbuyingNum" msprop:Generator_ColumnPropNameInRow="buyingNum" msprop:Generator_ColumnPropNameInTable="buyingNumColumn" msprop:Generator_UserColumnName="buyingNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="productRef" msprop:Generator_ColumnVarNameInTable="columnproductRef" msprop:Generator_ColumnPropNameInRow="productRef" msprop:Generator_ColumnPropNameInTable="productRefColumn" msprop:Generator_UserColumnName="productRef" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="buyPrice" msprop:Generator_ColumnVarNameInTable="columnbuyPrice" msprop:Generator_ColumnPropNameInRow="buyPrice" msprop:Generator_ColumnPropNameInTable="buyPriceColumn" msprop:Generator_UserColumnName="buyPrice" type="xs:int" minOccurs="0" />
+              <xs:element name="buyQuantity" msprop:Generator_ColumnVarNameInTable="columnbuyQuantity" msprop:Generator_ColumnPropNameInRow="buyQuantity" msprop:Generator_ColumnPropNameInTable="buyQuantityColumn" msprop:Generator_UserColumnName="buyQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="productName" msprop:Generator_ColumnVarNameInTable="columnproductName" msprop:Generator_ColumnPropNameInRow="productName" msprop:Generator_ColumnPropNameInTable="productNameColumn" msprop:Generator_UserColumnName="productName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

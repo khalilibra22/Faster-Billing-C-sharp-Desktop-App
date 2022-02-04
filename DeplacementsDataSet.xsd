@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DeplacementsDataSet" targetNamespace="http://tempuri.org/DeplacementsDataSet.xsd" xmlns:mstns="http://tempuri.org/DeplacementsDataSet.xsd" xmlns="http://tempuri.org/DeplacementsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FacturationConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FacturationConnectionString (Settings)" PropertyReference="ApplicationSettings.Facturation.Properties.Settings.GlobalReference.Default.FacturationConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DeplacementDtTableAdapter" GeneratorDataComponentClassName="DeplacementDtTableAdapter" Name="DeplacementDt" UserDataComponentName="DeplacementDtTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FacturationConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ProdPlacement.deplcDate, Product.productName, ProdPlacement.delapecedQuantity, Deplacement.dplcName
+FROM            ((Deplacement INNER JOIN
+                         ProdPlacement ON Deplacement.deplacementNum = ProdPlacement.deplacementNum) INNER JOIN
+                         Product ON ProdPlacement.productRef = Product.productRef)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="deplcDate" DataSetColumn="deplcDate" />
+              <Mapping SourceColumn="productName" DataSetColumn="productName" />
+              <Mapping SourceColumn="delapecedQuantity" DataSetColumn="delapecedQuantity" />
+              <Mapping SourceColumn="dplcName" DataSetColumn="dplcName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DeplacementsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DeplacementsDataSet" msprop:Generator_UserDSName="DeplacementsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DeplacementDt" msprop:Generator_TableClassName="DeplacementDtDataTable" msprop:Generator_TableVarName="tableDeplacementDt" msprop:Generator_TablePropName="DeplacementDt" msprop:Generator_RowDeletingName="DeplacementDtRowDeleting" msprop:Generator_RowChangingName="DeplacementDtRowChanging" msprop:Generator_RowEvHandlerName="DeplacementDtRowChangeEventHandler" msprop:Generator_RowDeletedName="DeplacementDtRowDeleted" msprop:Generator_UserTableName="DeplacementDt" msprop:Generator_RowChangedName="DeplacementDtRowChanged" msprop:Generator_RowEvArgName="DeplacementDtRowChangeEvent" msprop:Generator_RowClassName="DeplacementDtRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="deplcDate" msprop:Generator_ColumnVarNameInTable="columndeplcDate" msprop:Generator_ColumnPropNameInRow="deplcDate" msprop:Generator_ColumnPropNameInTable="deplcDateColumn" msprop:Generator_UserColumnName="deplcDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="productName" msprop:Generator_ColumnVarNameInTable="columnproductName" msprop:Generator_ColumnPropNameInRow="productName" msprop:Generator_ColumnPropNameInTable="productNameColumn" msprop:Generator_UserColumnName="productName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="delapecedQuantity" msprop:Generator_ColumnVarNameInTable="columndelapecedQuantity" msprop:Generator_ColumnPropNameInRow="delapecedQuantity" msprop:Generator_ColumnPropNameInTable="delapecedQuantityColumn" msprop:Generator_UserColumnName="delapecedQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="dplcName" msprop:Generator_ColumnVarNameInTable="columndplcName" msprop:Generator_ColumnPropNameInRow="dplcName" msprop:Generator_ColumnPropNameInTable="dplcNameColumn" msprop:Generator_UserColumnName="dplcName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

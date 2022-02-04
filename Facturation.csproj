@@ -1,0 +1,871 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E87657A-3AB4-453A-9723-E75F8B9C5FF6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Facturation</RootNamespace>
+    <AssemblyName>Facturation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Douis Mohammed\Desktop\FACT\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>FASTER Billing</ProductName>
+    <PublisherName>FASTER - DOUIS Ibrahim Khalil</PublisherName>
+    <SuiteName>FASTER Billing</SuiteName>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>42B9AB7786B2CF8D8F1E7AD5F38D1B4AB2AC014F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Facturation_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\..\Finance Manager Applicatoin\FinanceManagerSolution\FinanceManager\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Finance Manager Applicatoin\FinanceManagerSolution\FinanceManager\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LollipoUi">
+      <HintPath>..\..\..\..\Finance Manager Applicatoin\FinanceManagerSolution\FinanceManager\bin\Debug\LollipoUi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.3.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.9\lib\net40\QRCoder.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Zen.Barcode.Core">
+      <HintPath>C:\Users\Douis Mohammed\Desktop\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net45\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net45\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AchatDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AchatDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AllBuyingDataSet.cs">
+      <DependentUpon>AllBuyingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AllBuyingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllBuyingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BonAchatProds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BonAchatProds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigPanel.Designer.cs">
+      <DependentUpon>ConfigPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config\CommonInfo.cs" />
+    <Compile Include="Config\database.cs" />
+    <Compile Include="Config\toLetter.cs" />
+    <Compile Include="Controls\Auth\Signin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Auth\Signin.Designer.cs">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Buying.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Buying.Designer.cs">
+      <DependentUpon>Buying.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Clients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Clients.Designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Deplacements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Deplacements.Designer.cs">
+      <DependentUpon>Deplacements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Factures.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Factures.Designer.cs">
+      <DependentUpon>Factures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InvoicesControl\DeliveryDocument.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InvoicesControl\DeliveryDocument.Designer.cs">
+      <DependentUpon>DeliveryDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InvoicesControl\FinalInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InvoicesControl\FinalInvoice.Designer.cs">
+      <DependentUpon>FinalInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\produits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\produits.Designer.cs">
+      <DependentUpon>produits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AppUesrSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AppUesrSettings.Designer.cs">
+      <DependentUpon>AppUesrSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Statistiques.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Statistiques.Designer.cs">
+      <DependentUpon>Statistiques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Suppliers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryPrint.Designer.cs">
+      <DependentUpon>DeliveryPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaisseDataSet.cs">
+      <DependentUpon>CaisseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CaisseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaisseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DeplacementsDataSet.cs">
+      <DependentUpon>DeplacementsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DeplacementsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeplacementsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DetteDataSet.cs">
+      <DependentUpon>DetteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DetteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DetteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InvioceProductsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvioceProductsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="invoiceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>invoiceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InvoicePrintFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoicePrintFrom.Designer.cs">
+      <DependentUpon>InvoicePrintFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MsBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsBox.Designer.cs">
+      <DependentUpon>MsBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerInfoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OwnerInfoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PintBonAchat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PintBonAchat.Designer.cs">
+      <DependentUpon>PintBonAchat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintFinalInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintFinalInvoice.Designer.cs">
+      <DependentUpon>PrintFinalInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintGeneralReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintGeneralReport.Designer.cs">
+      <DependentUpon>PrintGeneralReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QRcodeDataSet.cs">
+      <DependentUpon>QRcodeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QRcodeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QRcodeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RecuPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecuPrint.Designer.cs">
+      <DependentUpon>RecuPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ClientsService.cs" />
+    <Compile Include="Service\CompanyInfo.cs" />
+    <Compile Include="Service\DeplacementService.cs" />
+    <Compile Include="Service\InvoicesService.cs" />
+    <Compile Include="Service\ProductsService.cs" />
+    <Compile Include="Service\SuppliersService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BonAchatRepport.rdlc" />
+    <EmbeddedResource Include="GeneralReport.rdlc" />
+    <EmbeddedResource Include="Controls\Buying.resx">
+      <DependentUpon>Buying.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Deplacements.resx">
+      <DependentUpon>Deplacements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryPrint.resx">
+      <DependentUpon>DeliveryPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PintBonAchat.resx">
+      <DependentUpon>PintBonAchat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintFinalInvoice.resx">
+      <DependentUpon>PrintFinalInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintGeneralReport.resx">
+      <DependentUpon>PrintGeneralReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recu.rdlc" />
+    <EmbeddedResource Include="ConfigPanel.resx">
+      <DependentUpon>ConfigPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AppUesrSettings.resx">
+      <DependentUpon>AppUesrSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Auth\Signin.resx">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Factures.resx">
+      <DependentUpon>Factures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InvoicesControl\DeliveryDocument.resx">
+      <DependentUpon>DeliveryDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InvoicesControl\FinalInvoice.resx">
+      <DependentUpon>FinalInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\produits.resx">
+      <DependentUpon>produits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Statistiques.resx">
+      <DependentUpon>Statistiques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoicePrintFrom.resx">
+      <DependentUpon>InvoicePrintFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalInvoiceRepport.rdlc" />
+    <EmbeddedResource Include="BonLivraisonRepport.rdlc" />
+    <EmbeddedResource Include="InvoiceRepport.rdlc" />
+    <EmbeddedResource Include="MsBox.resx">
+      <DependentUpon>MsBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RecuPrint.resx">
+      <DependentUpon>RecuPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AchatDataSet.xsc">
+      <DependentUpon>AchatDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AchatDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AchatDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AchatDataSet.xss">
+      <DependentUpon>AchatDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AllBuyingDataSet.xsc">
+      <DependentUpon>AllBuyingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AllBuyingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllBuyingDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AllBuyingDataSet.xss">
+      <DependentUpon>AllBuyingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BonAchatProds.xsc">
+      <DependentUpon>BonAchatProds.xsd</DependentUpon>
+    </None>
+    <None Include="BonAchatProds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BonAchatProds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BonAchatProds.xss">
+      <DependentUpon>BonAchatProds.xsd</DependentUpon>
+    </None>
+    <None Include="Facturation_CléTemporaire.pfx" />
+    <None Include="Facturation_TemporaryKey.pfx" />
+    <None Include="CaisseDataSet.xsc">
+      <DependentUpon>CaisseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CaisseDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CaisseDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CaisseDataSet.xss">
+      <DependentUpon>CaisseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DeplacementsDataSet.xsc">
+      <DependentUpon>DeplacementsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DeplacementsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DeplacementsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DeplacementsDataSet.xss">
+      <DependentUpon>DeplacementsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DetteDataSet.xsc">
+      <DependentUpon>DetteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DetteDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DetteDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DetteDataSet.xss">
+      <DependentUpon>DetteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvioceProductsDataSet.xsc">
+      <DependentUpon>InvioceProductsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvioceProductsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvioceProductsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InvioceProductsDataSet.xss">
+      <DependentUpon>InvioceProductsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="invoiceDataSet.xsc">
+      <DependentUpon>invoiceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="invoiceDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>invoiceDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="invoiceDataSet.xss">
+      <DependentUpon>invoiceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OwnerInfoDataSet.xsc">
+      <DependentUpon>OwnerInfoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OwnerInfoDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OwnerInfoDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OwnerInfoDataSet.xss">
+      <DependentUpon>OwnerInfoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QRcodeDataSet.xsc">
+      <DependentUpon>QRcodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QRcodeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QRcodeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QRcodeDataSet.xss">
+      <DependentUpon>QRcodeDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppInfo.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Facturation.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.12.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2014 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Types CLR du système Microsoft® pour SQL Server® 2014 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Types CLR du système Microsoft® pour SQL Server® 2014 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="AppInfo.accdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Bunifu.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Bunifu_UI_v1.5.3">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="de\Microsoft.SqlServer.Types.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\Microsoft.SqlServer.Types.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Facturation.accdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\Microsoft.ReportViewer.WinForms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\Microsoft.SqlServer.Types.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it\Microsoft.SqlServer.Types.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\Microsoft.SqlServer.Types.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ko\Microsoft.SqlServer.Types.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="LiveCharts">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="LiveCharts.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="LiveCharts.Wpf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="LollipoUi">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="pt\Microsoft.SqlServer.Types.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="QRCoder">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\Microsoft.SqlServer.Types.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-Hans\Microsoft.SqlServer.Types.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-Hant\Microsoft.SqlServer.Types.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zxing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="zxing.presentation">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
